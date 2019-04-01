@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login V15</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+		<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
+					<span class="login100-form-title-1" id="onkae">
+						onka
+					</span>
+				</div>
+				
+
+				<form class="login100-form validate-form">
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+						<span class="label-input100">English </span>
+						<div class="input100" id="word">1</div>
+						<input class="input100" type="text" id="" placeholder="Number Numiral">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "Passonka is required">
+						<span class="label-input100">Inpute Number</span>
+						<input class="input100" id="a1" type="text" name="number" placeholder="Number OR Amount" onkeyup="onkae.innerHTML=num(this.value)">
+						
+						<span class="focus-input100"></span>
+					</div>
+
+
+					<div class="flex-sb-m w-full p-b-30">
+						<div class="contact100-form-checkbox">
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+							<label class="label-checkbox100" for="ckb1">
+								Remember me
+							</label>
+						</div>
+
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Read
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>    
+
+		<script type="text/javascript">
+			
+		var units = new Array ("Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen","Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety");
+var tens = new Array ("Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety");
+function num(it) {
+	var theword = "";
+	var started;	
+	for (var i = 100; i >= 2; i--){
+		if (it>=i*100) {
+			theword += (started?tens[i-2].toLowerCase():tens[i-2]);
+			started = 1;
+			if (it!=i*100) theword += "-";
+			it -= i*100;
+			i=0
+		}
+	};
+	
+	for (var i=1; i < 200; i++) {
+		if (it==i) {
+			theword += (started?units[i].toLowerCase():units[i]);
+		}
+	};
+	return theword;
+}
+
+
+		</script>
+
+</body>
+</html>
