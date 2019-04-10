@@ -202,12 +202,12 @@ var units = new Array ("Zero", "ookan",
 "méjìlènígba",
 "mẹ́tàlènígba",
 "mẹ́rìnlènígba",
-"márùndínláàdọ́fà",
-"mẹ́rìndínláàdọ́fà",
-"mẹ́tàdínláàdọ́fà",
-"méjídínláàdọ́fà",
-"mọ́kàndínláàdọ́fà",
-"àádọ́fà",
+"aarunlerugba",
+"eefalerugba",
+"eejelerugba",
+"eejolerugba",
+"eesanlerugba",
+"eewalerugba",
 "okòólénígba dín mẹ́san",
 "okòólénígba dín mẹjo",
 "okòólénígba dín meje",
@@ -1005,6 +1005,8 @@ function num(it) {
 	for (var i=1; i <= 1000; i++) {
 		if (it==i) {
 			theword += (started?units[i].toLowerCase():units[i]);
+		}else if (it >= i) {
+			theword = 'ọ̀pọ̀';
 		}
 	};
 	return theword;

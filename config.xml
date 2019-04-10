@@ -16,5 +16,5 @@
   <author href="http://joytune.org" email="joytunetech@gmail.com">
     Joytune Tech Solution
   </author>
-
+  <icon src="images/icon.png" />
 </widget>
