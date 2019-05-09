@@ -1005,9 +1005,31 @@ function num(it) {
 	for (var i=1; i <= 1000; i++) {
 		if (it==i) {
 			theword += (started?units[i].toLowerCase():units[i]);
-		}else if (it >= i) {
+			
+			var audio = new Audio('./audio/'+i+'.mp3');
+			audio.play();
+		}else if (it >1000) {
 			theword = 'ọ̀pọ̀';
 		}
 	};
 	return theword;
+}
+
+function audio() {
+	var theword = "";
+	var started;	
+	var it= document.getElementById('a1').value;
+
+	for (var i=1; i <= 1000; i++) {
+		if (it==i) {
+			theword += (started?units[i].toLowerCase():units[i]);
+			
+			var audio = new Audio('./audio/'+i+'.mp3');
+			audio.play();
+		}else if (it >1000) {
+			theword = 'ọ̀pọ̀';
+		}
+	};
+	return theword;
+	alert(it);
 }

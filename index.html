@@ -27,6 +27,9 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
+		<audio autoplay="autoplay">
+			<source src="audio/onka_start.mp3" type="audio/mp3">
+		</audio> 
 
 		<div class="limiter">
 		<div class="container-login100">
@@ -41,6 +44,7 @@
 
 				<form class="login100-form validate-form">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+
 						<div class="input100" id="word" style="font-size: 20px"></div>
 						
 						<span class="focus-input100"></span>
@@ -54,15 +58,19 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button type="button" class="btn btn-dark" href="#" onclick="onkae.innerHTML=audio()"><i class="fa fa-assistive-listening-systems" aria-hidden="true"></i></button>
+
+						<button class="btn btn-dark" style="margin-left: 5%" href="#" onclick="audio()">
 							Re-fresh
 						</button>
+										
 					</div>
 				</form>
 			</div>
 		</div>
-	</div>    
+	</div>   
 
+	
 		<script src="js/onka.js"></script>
 		<script type="text/javascript">
 
